@@ -31,5 +31,5 @@
  * @subpackage    cake.app
  */
 class AppController extends Controller {
-    var $components = array('Auth');
+    var $components = array('Auth', 'Session');
 }

@@ -4,7 +4,10 @@
 		<legend><?php __('Edit Contact'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('prefix');
+       $options = array("Herr" =>"Herr", "Frau" => "Frau","Mademoiselle"=>"Mademoiselle");
+       echo $form->input('prefix',
+                         array('type'=>'select',"label"=> "Anrede",'options'=> $options,'attributes'=> array('size'=>3, 'multiple'=> 'true'),
+                         'showEmpty'=>true)); 
 		echo $this->Form->input('firstname');
 		echo $this->Form->input('lastname');
 		echo $this->Form->input('phone');
