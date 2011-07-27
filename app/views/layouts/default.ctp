@@ -37,14 +37,20 @@
     <div id="container">
         <div id="header">
             <h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework', true), 'http://cakephp.org'); ?></h1>
-    <ul>
-        <li><?php echo $this->Html->link(__('Home', true), array('controller' => '', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Companies', true), array('controller' => 'companies', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Company', true), array('controller' => 'companies', 'action' => 'add')); ?> </li>
+        <ul>
+            <li><?php echo $this->Html->link(__('Home', true), array('controller' => '', 'action' => 'index')); ?> </li>
+            <li><?php echo $this->Html->link(__('List Companies', true), array('controller' => 'companies', 'action' => 'index')); ?> </li>
+            <li><?php echo $this->Html->link(__('New Company', true), array('controller' => 'companies', 'action' => 'add')); ?> </li>
+            
+            <li><?php echo $this->Html->link(__('List Contacts', true), array('controller' => 'contacts', 'action' => 'index')); ?> </li>
+            <li><?php echo $this->Html->link(__('New Contact', true), array('controller' => 'contacts', 'action' => 'add')); ?> </li>
+        </ul>
         
-        <li><?php echo $this->Html->link(__('List Contacts', true), array('controller' => 'contacts', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Contact', true), array('controller' => 'contacts', 'action' => 'add')); ?> </li>
-    </ul>
+            <div id="mast" style="float:right">
+            <?php echo $session->read('Auth.User.first_name'); ?>
+            <?php echo $html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?>
+            </div>
+ 
         </div>
         <div id="content">
 
